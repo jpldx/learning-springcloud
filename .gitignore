@@ -1,2 +1,5 @@
 # Project exclude paths
 /cloud-provider-payment-8001/target/
+
+*.iml
+*.idea
