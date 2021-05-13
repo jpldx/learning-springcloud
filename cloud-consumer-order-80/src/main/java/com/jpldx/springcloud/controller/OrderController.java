@@ -19,7 +19,8 @@ public class OrderController {
     @Autowired
     private RestTemplate restTemplate;
 
-    private static final String PAYMENT_SERVICE_URL = "http://localhost:8001";
+//    private static final String PAYMENT_SERVICE_URL = "http://localhost:8001";
+    private static final String PAYMENT_SERVICE_URL = "http://CLOUD-PAYMENT-SERVICE";
 
     @PostMapping("/payment/add")
     public Result add(Payment payment){
