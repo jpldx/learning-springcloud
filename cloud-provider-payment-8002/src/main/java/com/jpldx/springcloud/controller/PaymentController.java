@@ -38,4 +38,9 @@ public class PaymentController {
         }
         return new Result(500, "failed!", null);
     }
+
+    @GetMapping("/lb")
+    public String lb(){
+        return serverPort;
+    }
 }

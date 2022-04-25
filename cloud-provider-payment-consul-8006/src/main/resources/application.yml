@@ -1,9 +1,16 @@
 server:
-  port: 8002
+  port: 8006
 
 spring:
   application:
     name: cloud-payment-service
+  # Consul
+  cloud:
+    consul:
+      host: docker.jpldx.com
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
 
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -16,11 +23,3 @@ mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.jpldx.springcloud.entity # xml entity 别名配置
 
-
-eureka:
-  client:
-    register-with-eureka: true # 是否将自己注册进EurekaServer
-    fetch-registry: true # 是否从EurekaServer抓取已有的注册信息，单节点无所谓，集群必须设置为true才能配合Ribbon实现负载均衡
-    service-url:
-#      defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/ # 集群配置
-      defaultZone: http://eureka7001.com:7001/eureka/

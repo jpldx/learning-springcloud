@@ -11,6 +11,7 @@ import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.UUID;
 
 /**
  * @author chen.xudong
@@ -69,8 +70,8 @@ public class PaymentController {
     }
 
 
-    @GetMapping("/lb")
-    public String lb(){
-        return serverPort;
+    @GetMapping("/zk")
+    public String paymentZk(){
+        return "Spring Cloud with Zookeeper: " + serverPort + "\t" + UUID.randomUUID().toString();
     }
 }

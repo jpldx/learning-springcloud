@@ -12,7 +12,12 @@
   <modules>
     <module>cloud-provider-payment-8001</module>
     <module>cloud-provider-payment-8002</module>
+    <module>cloud-provider-payment-zk-8004</module>
+    <module>cloud-provider-payment-consul-8006</module>
     <module>cloud-consumer-order-80</module>
+    <module>cloud-consumer-order-zk-80</module>
+    <module>cloud-consumer-order-consul-80</module>
+    <module>cloud-consumer-order-feign-80</module>
     <module>cloud-commons</module>
     <module>cloud-eureka-server-7001</module>
     <module>cloud-eureka-server-7002</module>
@@ -48,7 +53,7 @@
   <!-- Dependencies Management -->
   <dependencyManagement>
     <dependencies>
-      <!-- springboot 2.2.2 -->
+      <!-- SpringBoot 2.2.2 -->
       <dependency>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-dependencies</artifactId>
@@ -56,7 +61,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- springcloud Hoxton.SR1 -->
+      <!-- SpringCloud Hoxton.SR1 -->
       <dependency>
         <groupId>org.springframework.cloud</groupId>
         <artifactId>spring-cloud-dependencies</artifactId>
@@ -64,7 +69,7 @@
         <type>pom</type>
         <scope>import</scope>
       </dependency>
-      <!-- springcloud alibaba 2.1.0 -->
+      <!-- SpringCloud Alibaba 2.1.0 -->
       <dependency>
         <groupId>com.alibaba.cloud</groupId>
         <artifactId>spring-cloud-alibaba-dependencies</artifactId>
